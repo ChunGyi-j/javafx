@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="0.0" styleClass="login-view" stylesheets="@Application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.views.Login">
+   <children>
+      <VBox styleClass="login-logo-wrapper">
+         <children>
+            <ImageView fitHeight="160.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pos.png" />
+               </image>
+            </ImageView>
+            <Label styleClass="login-title" text="Mini POS" />
+         </children>
+      </VBox>
+      <VBox styleClass="login-form" HBox.hgrow="ALWAYS">
+         <children>
+            <Label styleClass="login-title" text="Login" />
+            <Label fx:id="message" />
+            <VBox styleClass="form-group">
+               <children>
+                  <Label text="Login ID" />
+                  <TextField fx:id="loginid" promptText="enter your login id" />
+               </children>
+            </VBox>
+            <VBox styleClass="form-group">
+               <children>
+                  <Label text="Password" />
+                  <PasswordField fx:id="password" promptText="enter your password" />
+               </children>
+            </VBox>
+            <HBox styleClass="form-group">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#close" text="CLOSE" />
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#login" text="LOGIN" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
